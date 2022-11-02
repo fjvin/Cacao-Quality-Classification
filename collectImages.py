@@ -22,14 +22,14 @@ while True:
 
     # if key == 'q'; quit the program
     if key & 0xFF == ord('q'):
-        time.sleep(2)
+        time.sleep(1)
         print('Label Image Software Closed')
 
     # if key == 's'; save the frame with unique ID to IMAGES_PATH
     if key & 0xFF == ord('s'):
         imgName = os.path.join(IMAGES_PATH, '{}.jpg'.format(str(uuid.uuid1())))
         cv2.imwrite(imgName, frame)
-        time.sleep(2)
+        time.sleep(1)
         print('Image saved as "{}"'.format(imgName))        
 
 cam.release()
